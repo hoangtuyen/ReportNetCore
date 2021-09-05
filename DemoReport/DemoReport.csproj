@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\jsViewer.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="reports\ReportDemo.rdlx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="node_modules\%40grapecity\ar-viewer\dist\custom-locale.json" />
+    <Content Include="node_modules\%40grapecity\ar-viewer\dist\jsViewer.min.css" />
+    <Content Include="node_modules\%40grapecity\ar-viewer\package.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="reports\ReportDemo.rdlx" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="node_modules\%40grapecity\ar-viewer\dist\jsViewer.min.js" />
+    <None Include="node_modules\%40grapecity\ar-viewer\README.md" />
+    <None Include="wwwroot\jsViewer.min.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EPPlus" Version="5.7.4" />
+    <PackageReference Include="GrapeCity.ActiveReports" Version="15.1.8" />
+    <PackageReference Include="GrapeCity.ActiveReports.Aspnetcore.Viewer" Version="15.1.8" />
+    <PackageReference Include="GrapeCity.ActiveReports.Core.DataProviders" Version="2.0.4" />
+    <PackageReference Include="GrapeCity.ActiveReports.Core.Rdl" Version="2.2.5" />
+    <PackageReference Include="GrapeCity.ActiveReports.Core.Rendering" Version="2.2.5" />
+  </ItemGroup>
+
+</Project>

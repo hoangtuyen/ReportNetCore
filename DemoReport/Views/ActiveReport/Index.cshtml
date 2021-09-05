@@ -1,0 +1,26 @@
+﻿    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Active Report</title>
+        <link href="jsViewer.min.css" rel="stylesheet">
+    </head>
+    <body onload="loadViewer()">
+        <div style="width: 100%; overflow-x: hidden">
+            <div style="float:right;width:100%" id="viewerContainer">
+            </div>
+        </div>
+        <script type="text/javascript" src="jsViewer.min.js"></script>
+        <script type="text/javascript">
+            let viewer;
+            function loadViewer() {
+                viewer = GrapeCity.ActiveReports.JSViewer.create({
+                    element: '#viewerContainer',
+                    reportID: 'ReportDemo.rdlx',
+                    reportParameters: [{ name: 'FirstName', values: ["Active Report"] }],
+                    availableExports: ['Xml', 'Pdf', 'Excel'],
+                });
+            }
+        </script>
+    </body>
+</html>
